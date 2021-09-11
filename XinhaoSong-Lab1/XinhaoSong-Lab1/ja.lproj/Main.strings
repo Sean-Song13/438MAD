@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Sales Tax %"; ObjectID = "7wd-cn-bPD"; */
+"7wd-cn-bPD.text" = "消費税 %";
+
+/* Class = "UITextField"; placeholder = "enter original price"; ObjectID = "AUI-ZN-Pff"; */
+"AUI-ZN-Pff.placeholder" = "元の価格を入力してください";
+
+/* Class = "UILabel"; text = "Discount %"; ObjectID = "ceF-b9-tZZ"; */
+"ceF-b9-tZZ.text" = "ディスカウント %";
+
+/* Class = "UILabel"; text = "$0"; ObjectID = "HDi-t5-8e6"; */
+"HDi-t5-8e6.text" = "$0";
+
+/* Class = "UILabel"; text = "Original Price"; ObjectID = "mEE-hu-bOS"; */
+"mEE-hu-bOS.text" = "元値";
+
+/* Class = "UILabel"; text = "My  Shopping Calculator"; ObjectID = "muw-9r-eMZ"; */
+"muw-9r-eMZ.text" = "私のショッピング計算機";
+
+/* Class = "UITextField"; placeholder = "enter sales tax"; ObjectID = "PgZ-fa-oUD"; */
+"PgZ-fa-oUD.placeholder" = "消費税を入力してください";
+
+/* Class = "UILabel"; text = "Input can only be numbers"; ObjectID = "ssU-iA-B0G"; */
+"ssU-iA-B0G.text" = "入力できるのは数字のみです ";
+
+/* Class = "UITextField"; placeholder = "enter discount"; ObjectID = "tHe-6o-FwG"; */
+"tHe-6o-FwG.placeholder" = "割引を入力してください";
+
+/* Class = "UILabel"; text = "Final Price"; ObjectID = "wQc-kG-l5A"; */
+"wQc-kG-l5A.text" = "最終価格";
+

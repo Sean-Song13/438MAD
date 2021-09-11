@@ -1,0 +1,30 @@
+/* Class = "UILabel"; text = "Sales Tax %"; ObjectID = "7wd-cn-bPD"; */
+"7wd-cn-bPD.text" = "消费税 %";
+
+/* Class = "UITextField"; placeholder = "enter original price"; ObjectID = "AUI-ZN-Pff"; */
+"AUI-ZN-Pff.placeholder" = "输入原始价格";
+
+/* Class = "UILabel"; text = "Discount %"; ObjectID = "ceF-b9-tZZ"; */
+"ceF-b9-tZZ.text" = "折扣 %";
+
+/* Class = "UILabel"; text = "$0"; ObjectID = "HDi-t5-8e6"; */
+"HDi-t5-8e6.text" = "$0";
+
+/* Class = "UILabel"; text = "Original Price"; ObjectID = "mEE-hu-bOS"; */
+"mEE-hu-bOS.text" = "原始价格";
+
+/* Class = "UILabel"; text = "My  Shopping Calculator"; ObjectID = "muw-9r-eMZ"; */
+"muw-9r-eMZ.text" = "我的购物计算器";
+
+/* Class = "UITextField"; placeholder = "enter sales tax"; ObjectID = "PgZ-fa-oUD"; */
+"PgZ-fa-oUD.placeholder" = "输入消费税";
+
+/* Class = "UILabel"; text = "Input can only be numbers"; ObjectID = "ssU-iA-B0G"; */
+"ssU-iA-B0G.text" = "输入只能为数字";
+
+/* Class = "UITextField"; placeholder = "enter discount"; ObjectID = "tHe-6o-FwG"; */
+"tHe-6o-FwG.placeholder" = "输入折扣";
+
+/* Class = "UILabel"; text = "Final Price"; ObjectID = "wQc-kG-l5A"; */
+"wQc-kG-l5A.text" = "最终价格";
+

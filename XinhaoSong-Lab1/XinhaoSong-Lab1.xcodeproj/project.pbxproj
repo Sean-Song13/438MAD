@@ -14,6 +14,8 @@
 		5DDCFB9D26EBD8F0001AF897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCFB9C26EBD8F0001AF897 /* Assets.xcassets */; };
 		5DDCFBA026EBD8F0001AF897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCFB9E26EBD8F0001AF897 /* LaunchScreen.storyboard */; };
 		5DDCFBB826EC0CBC001AF897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCFBB626EC0CBC001AF897 /* InfoPlist.strings */; };
+		5DDCFBBF26F12596001AF897 /* SalesTaxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCFBBE26F12596001AF897 /* SalesTaxModel.swift */; };
+		5DDCFBC226F12AA0001AF897 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCFBC126F12AA0001AF897 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		5DDCFBB926EC4A78001AF897 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		5DDCFBBA26EC4A78001AF897 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		5DDCFBBB26EC4BE0001AF897 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DDCFBBE26F12596001AF897 /* SalesTaxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTaxModel.swift; sourceTree = "<group>"; };
+		5DDCFBC126F12AA0001AF897 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		5DDCFB9226EBD8E9001AF897 /* XinhaoSong-Lab1 */ = {
 			isa = PBXGroup;
 			children = (
+				5DDCFBC126F12AA0001AF897 /* data.json */,
 				5DDCFBA126EBD8F0001AF897 /* Info.plist */,
 				5DDCFBB626EC0CBC001AF897 /* InfoPlist.strings */,
 				5DDCFB9326EBD8E9001AF897 /* AppDelegate.swift */,
@@ -71,6 +76,7 @@
 				5DDCFB9C26EBD8F0001AF897 /* Assets.xcassets */,
 				5DDCFB9E26EBD8F0001AF897 /* LaunchScreen.storyboard */,
 				5DDCFB9926EBD8E9001AF897 /* Main.storyboard */,
+				5DDCFBBE26F12596001AF897 /* SalesTaxModel.swift */,
 			);
 			path = "XinhaoSong-Lab1";
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 				5DDCFBA026EBD8F0001AF897 /* LaunchScreen.storyboard in Resources */,
 				5DDCFBB826EC0CBC001AF897 /* InfoPlist.strings in Resources */,
 				5DDCFB9D26EBD8F0001AF897 /* Assets.xcassets in Resources */,
+				5DDCFBC226F12AA0001AF897 /* data.json in Resources */,
 				5DDCFB9B26EBD8E9001AF897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDCFBBF26F12596001AF897 /* SalesTaxModel.swift in Sources */,
 				5DDCFB9826EBD8E9001AF897 /* ViewController.swift in Sources */,
 				5DDCFB9426EBD8E9001AF897 /* AppDelegate.swift in Sources */,
 				5DDCFB9626EBD8E9001AF897 /* SceneDelegate.swift in Sources */,

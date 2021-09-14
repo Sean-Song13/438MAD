@@ -1,0 +1,335 @@
+[
+  {
+    "State": "California",
+    "stateTaxRate": "7.2500",
+    "avgLocalTaxRate": "1.3100",
+    "combinedRate": "8.5600",
+    "Pop": 39613493
+  },
+  {
+    "State": "Tennessee",
+    "stateTaxRate": 7,
+    "avgLocalTaxRate": "2.4700",
+    "combinedRate": "9.4700",
+    "Pop": 6944260
+  },
+  {
+    "State": "Rhode Island",
+    "stateTaxRate": 7,
+    "combinedRate": 7,
+    "Pop": 1061509
+  },
+  {
+    "State": "Mississippi",
+    "stateTaxRate": 7,
+    "avgLocalTaxRate": "0.0700",
+    "combinedRate": "7.0700",
+    "Pop": 2966407
+  },
+  {
+    "State": "Indiana",
+    "stateTaxRate": 7,
+    "combinedRate": 7,
+    "Pop": 6805663
+  },
+  {
+    "State": "Minnesota",
+    "stateTaxRate": "6.8800",
+    "avgLocalTaxRate": "0.5500",
+    "combinedRate": "7.4300",
+    "Pop": 5706398
+  },
+  {
+    "State": "Nevada",
+    "stateTaxRate": "6.8500",
+    "avgLocalTaxRate": "1.2900",
+    "combinedRate": "8.1400",
+    "Pop": 3185786
+  },
+  {
+    "State": "New Jersey",
+    "stateTaxRate": "6.6300",
+    "avgLocalTaxRate": "-0.0300",
+    "combinedRate": "6.6000",
+    "Pop": 8874520
+  },
+  {
+    "State": "Washington",
+    "stateTaxRate": "6.5000",
+    "avgLocalTaxRate": "2.6700",
+    "combinedRate": "9.1700",
+    "Pop": 7796941
+  },
+  {
+    "State": "Kansas",
+    "stateTaxRate": "6.5000",
+    "avgLocalTaxRate": "2.1700",
+    "combinedRate": "8.6700",
+    "Pop": 2917224
+  },
+  {
+    "State": "Arkansas",
+    "stateTaxRate": "6.5000",
+    "avgLocalTaxRate": "2.9300",
+    "combinedRate": "9.4300",
+    "Pop": 3033946
+  },
+  {
+    "State": "Connecticut",
+    "stateTaxRate": "6.3500",
+    "combinedRate": "6.3500",
+    "Pop": 3552821
+  },
+  {
+    "State": "Texas",
+    "stateTaxRate": "6.2500",
+    "avgLocalTaxRate": "1.9400",
+    "combinedRate": "8.1900",
+    "Pop": 29730311
+  },
+  {
+    "State": "Massachusetts",
+    "stateTaxRate": "6.2500",
+    "combinedRate": "6.2500",
+    "Pop": 6912239
+  },
+  {
+    "State": "Illinois",
+    "stateTaxRate": "6.2500",
+    "avgLocalTaxRate": "2.4900",
+    "combinedRate": "8.7400",
+    "Pop": 12569321
+  },
+  {
+    "State": "West Virginia",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "0.3900",
+    "combinedRate": "6.3900",
+    "Pop": 1767859
+  },
+  {
+    "State": "Vermont",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "0.1800",
+    "combinedRate": "6.1800",
+    "Pop": 623251
+  },
+  {
+    "State": "South Carolina",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "1.4300",
+    "combinedRate": "7.4300",
+    "Pop": 5277830
+  },
+  {
+    "State": "Pennsylvania",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "0.3400",
+    "combinedRate": "6.3400",
+    "Pop": 12804123
+  },
+  {
+    "State": "Michigan",
+    "stateTaxRate": 6,
+    "combinedRate": 6,
+    "Pop": 9992427
+  },
+  {
+    "State": "Maryland",
+    "stateTaxRate": 6,
+    "combinedRate": 6,
+    "Pop": 6065436
+  },
+  {
+    "State": "Kentucky",
+    "stateTaxRate": 6,
+    "combinedRate": 6,
+    "Pop": 4480713
+  },
+  {
+    "State": "Iowa",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "0.8200",
+    "combinedRate": "6.8200",
+    "Pop": 3167974
+  },
+  {
+    "State": "Idaho",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "0.0300",
+    "combinedRate": "6.0300",
+    "Pop": 1860123
+  },
+  {
+    "State": "Florida",
+    "stateTaxRate": 6,
+    "avgLocalTaxRate": "1.0500",
+    "combinedRate": "7.0500",
+    "Pop": 21944577
+  },
+  {
+    "State": "Utah",
+    "stateTaxRate": "5.9500",
+    "avgLocalTaxRate": "0.9900",
+    "combinedRate": "6.9400",
+    "Pop": 3310774
+  },
+  {
+    "State": "Ohio",
+    "stateTaxRate": "5.7500",
+    "avgLocalTaxRate": "1.4200",
+    "combinedRate": "7.1700",
+    "Pop": 11714618
+  },
+  {
+    "State": "Arizona",
+    "stateTaxRate": "5.6000",
+    "avgLocalTaxRate": "2.7700",
+    "combinedRate": "8.3700",
+    "Pop": 7520103
+  },
+  {
+    "State": "Nebraska",
+    "stateTaxRate": "5.5000",
+    "avgLocalTaxRate": "1.3500",
+    "combinedRate": "6.8500",
+    "Pop": 1951996
+  },
+  {
+    "State": "Maine",
+    "stateTaxRate": "5.5000",
+    "combinedRate": "5.5000",
+    "Pop": 1354522
+  },
+  {
+    "State": "Virginia",
+    "stateTaxRate": "5.3000",
+    "avgLocalTaxRate": "0.3500",
+    "combinedRate": "5.6500",
+    "Pop": 8603985
+  },
+  {
+    "State": "New Mexico",
+    "stateTaxRate": "5.1300",
+    "avgLocalTaxRate": "2.6900",
+    "combinedRate": "7.8200",
+    "Pop": 2105005
+  },
+  {
+    "State": "Wisconsin",
+    "stateTaxRate": 5,
+    "avgLocalTaxRate": "0.4400",
+    "combinedRate": "5.4400",
+    "Pop": 5852490
+  },
+  {
+    "State": "North Dakota",
+    "stateTaxRate": 5,
+    "avgLocalTaxRate": "1.8500",
+    "combinedRate": "6.8500",
+    "Pop": 770026
+  },
+  {
+    "State": "North Carolina",
+    "stateTaxRate": "4.7500",
+    "avgLocalTaxRate": "2.2200",
+    "combinedRate": "6.9700",
+    "Pop": 10701022
+  },
+  {
+    "State": "South Dakota",
+    "stateTaxRate": "4.5000",
+    "avgLocalTaxRate": "1.9000",
+    "combinedRate": "6.4000",
+    "Pop": 896581
+  },
+  {
+    "State": "Oklahoma",
+    "stateTaxRate": "4.5000",
+    "avgLocalTaxRate": "4.4200",
+    "combinedRate": "8.9200",
+    "Pop": 3990443
+  },
+  {
+    "State": "Louisiana",
+    "stateTaxRate": "4.4500",
+    "avgLocalTaxRate": 5,
+    "combinedRate": "9.4500",
+    "Pop": 4627002
+  },
+  {
+    "State": "Missouri",
+    "stateTaxRate": "4.2300",
+    "avgLocalTaxRate": "3.9000",
+    "combinedRate": "8.1300",
+    "Pop": 6169038
+  },
+  {
+    "State": "Wyoming",
+    "stateTaxRate": 4,
+    "avgLocalTaxRate": "1.3600",
+    "combinedRate": "5.3600",
+    "Pop": 581075
+  },
+  {
+    "State": "New York",
+    "stateTaxRate": 4,
+    "avgLocalTaxRate": "4.4900",
+    "combinedRate": "8.4900",
+    "Pop": 19299981
+  },
+  {
+    "State": "Hawaii",
+    "stateTaxRate": 4,
+    "avgLocalTaxRate": "0.4100",
+    "combinedRate": "4.4100",
+    "Pop": 1406430
+  },
+  {
+    "State": "Georgia",
+    "stateTaxRate": 4,
+    "avgLocalTaxRate": "3.2900",
+    "combinedRate": "7.2900",
+    "Pop": 10830007
+  },
+  {
+    "State": "Alabama",
+    "stateTaxRate": 4,
+    "avgLocalTaxRate": "5.1400",
+    "combinedRate": "9.1400",
+    "Pop": 4934193
+  },
+  {
+    "State": "Colorado",
+    "stateTaxRate": "2.9000",
+    "avgLocalTaxRate": "4.7300",
+    "combinedRate": "7.6300",
+    "Pop": 5893634
+  },
+  {
+    "State": "Oregon",
+    "combinedRate": 0,
+    "Pop": 4289439
+  },
+  {
+    "State": "New Hampshire",
+    "combinedRate": 0,
+    "Pop": 1372203
+  },
+  {
+    "State": "Montana",
+    "combinedRate": 0,
+    "Pop": 1085004
+  },
+  {
+    "State": "Delaware",
+    "combinedRate": 0,
+    "Pop": 990334
+  },
+  {
+    "State": "Alaska",
+    "avgLocalTaxRate": "1.4300",
+    "combinedRate": "1.4300",
+    "Pop": 724357
+  }
+]

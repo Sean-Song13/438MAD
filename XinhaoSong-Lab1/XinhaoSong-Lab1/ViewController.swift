@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreLocation
+import Contacts
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var originalPriceInputField: UITextField!
     @IBOutlet weak var discountInputField: UITextField!
@@ -19,6 +21,8 @@ class ViewController: UIViewController {
     var discount: Float?
     var salesTax: Float?
     
+    var locationManager: CLLocationManager?
+    var salesTaxs: [SalesTaxModel.SalesTax]?
     var illegalFieldIndex = -1
     
     override func viewDidLoad() {
@@ -28,16 +32,72 @@ class ViewController: UIViewController {
         discount = 0.0
         salesTax = 0.0
         // Do any additional setup after loading the view.
+        
+        ReadSalesTaxFromJson()
+        
+        print(salesTaxs?.count)
+        
+        // Create a CLLocationManager and assign a delegate
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestAlwaysAuthorization()
+
+        // Request a user’s location once
+        let status = CLLocationManager.authorizationStatus()
+        if status == .authorizedWhenInUse || status ==  .authorizedAlways
+        {
+            locationManager?.requestLocation()
+        }
     }
+    
 
     
+    func locationManager(
+        _ manager: CLLocationManager,
+        didUpdateLocations locations: [CLLocation]
+    ) {
+        if let location = locations.first {
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            // Handle location update
+//            print("\(latitude)")
+//            print("\(longitude)")
+            
+            let location = CLLocation(latitude: latitude, longitude: longitude)
+            location.placemark { placemark, error in
+                guard let placemark = placemark else {
+                    print("Error:", error ?? "nil")
+                    return
+                }
+                print(placemark.administrativeArea ?? "")
+//                print(placemark.postalAddressFormatted ?? "")
+            }
+        }
+    }
+    
+    func ReadSalesTaxFromJson() {
+        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {return}
+        let localData = NSData.init(contentsOfFile: path)! as Data
+        do{
+            let allSalesTax = try JSONDecoder().decode(SalesTaxModel.self, from: localData)
+            if let salesTaxs = allSalesTax.salesTaxs {
+                self.salesTaxs = salesTaxs
+            }
+        }catch{
+            debugPrint("json decode failed")
+        }
+    }
+    
+    func locationManager(
+        _ manager: CLLocationManager,
+        didFailWithError error: Error
+    ) {
+        // Handle failure to get a user’s location
+        print("failure to get a user’s location")
+    }
+
     @IBAction func OnOriginalPriceChanged(_ sender: Any) {
         HideIllegalInputError()
-//        var tempText = originalPriceInputField.text ?? ""
-//        if tempText.starts(with: "-"){
-//            tempText = "-0.0"
-//        }
-//        originalPrice = tempText.isEmpty ? 0.0 : Float(tempText)
         originalPrice = InputInterpretation(input: originalPriceInputField.text)
         if originalPrice == nil{
             RaiseIllegalInputError()
@@ -51,11 +111,6 @@ class ViewController: UIViewController {
     
     @IBAction func OnDIscountChanged(_ sender: Any) {
         HideIllegalInputError()
-//        var tempText = discountInputField.text ?? ""
-//        if tempText.starts(with: "-"){
-//            tempText = "-0.0"
-//        }
-//        discount = tempText.isEmpty ? 0.0 : Float(tempText)
         discount = InputInterpretation(input: discountInputField.text)
         if discount == nil{
             RaiseIllegalInputError()
@@ -69,11 +124,6 @@ class ViewController: UIViewController {
     
     @IBAction func OnSalesTaxChanged(_ sender: Any) {
         HideIllegalInputError()
-//        var tempText = salesTaxInputField.text ?? ""
-//        if tempText.starts(with: "-"){
-//            tempText = "-0.0"
-//        }
-//        salesTax = tempText.isEmpty ? 0.0 : Float(tempText)
         salesTax = InputInterpretation(input: salesTaxInputField.text)
         if salesTax == nil{
             RaiseIllegalInputError()
@@ -121,3 +171,15 @@ class ViewController: UIViewController {
     }
 }
 
+extension CLLocation {
+    func placemark(completion: @escaping (_ placemark: CLPlacemark?, _ error: Error?) -> ()) {
+        CLGeocoder().reverseGeocodeLocation(self) { completion($0?.first, $1) }
+    }
+}
+
+extension CLPlacemark {
+    var postalAddressFormatted: String? {
+        guard let postalAddress = postalAddress else { return nil }
+        return CNPostalAddressFormatter().string(from: postalAddress)
+    }
+}

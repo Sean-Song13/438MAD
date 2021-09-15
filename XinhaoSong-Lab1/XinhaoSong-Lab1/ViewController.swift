@@ -16,14 +16,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var salesTaxInputField: UITextField!
     @IBOutlet weak var finalPriceLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var theTaxLabel: UILabel!
     
     var originalPrice: Float?
     var discount: Float?
     var salesTax: Float?
     
     var locationManager: CLLocationManager?
-    var salesTaxs: [SalesTaxModel.SalesTax]?
     var illegalFieldIndex = -1
+    
+    var dataManager: DataManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         originalPrice = 0.0
         discount = 0.0
         salesTax = 0.0
+        theTaxLabel.alpha = 0
         // Do any additional setup after loading the view.
-        
-        ReadSalesTaxFromJson()
-        
-        print(salesTaxs?.count)
         
         // Create a CLLocationManager and assign a delegate
         locationManager = CLLocationManager()
@@ -43,11 +42,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager?.requestAlwaysAuthorization()
 
         // Request a user’s location once
-        let status = CLLocationManager.authorizationStatus()
-        if status == .authorizedWhenInUse || status ==  .authorizedAlways
-        {
-            locationManager?.requestLocation()
-        }
+//        let status = CLLocationManager.authorizationStatus()
+//        if status == .authorizedWhenInUse || status ==  .authorizedAlways
+//        {
+//            locationManager?.requestLocation()
+//        }
+        
     }
     
 
@@ -62,7 +62,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             // Handle location update
 //            print("\(latitude)")
 //            print("\(longitude)")
-            
             let location = CLLocation(latitude: latitude, longitude: longitude)
             location.placemark { placemark, error in
                 guard let placemark = placemark else {
@@ -70,21 +69,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     return
                 }
                 print(placemark.administrativeArea ?? "")
+                let state = placemark.administrativeArea ?? ""
+                var tax = self.dataManager?.RequireSalesTax(stateName: state)
+                if tax! < 0{
+                    tax = 0.0
+                    self.theTaxLabel.text = "No data in \(state)"
+                }else{
+                    self.theTaxLabel.text = "Tax in \(state) is \(String(format: "%.2f", tax!))"}
+                self.theTaxLabel.alpha = 1
+                self.salesTaxInputField.text = String(tax!)
+                self.salesTax = tax
+                self.UpdateFinalPrice()
 //                print(placemark.postalAddressFormatted ?? "")
             }
-        }
-    }
-    
-    func ReadSalesTaxFromJson() {
-        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {return}
-        let localData = NSData.init(contentsOfFile: path)! as Data
-        do{
-            let allSalesTax = try JSONDecoder().decode(SalesTaxModel.self, from: localData)
-            if let salesTaxs = allSalesTax.salesTaxs {
-                self.salesTaxs = salesTaxs
-            }
-        }catch{
-            debugPrint("json decode failed")
         }
     }
     
@@ -105,8 +102,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             discount = 0.0
             return
         }
-        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
-        UpdateFinalPrice(finalPrice: finalPrice)
+//        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
+        UpdateFinalPrice()
     }
     
     @IBAction func OnDIscountChanged(_ sender: Any) {
@@ -118,11 +115,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             discount = 0.0
             return
         }
-        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
-        UpdateFinalPrice(finalPrice: finalPrice)
+//        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
+        UpdateFinalPrice()
     }
     
     @IBAction func OnSalesTaxChanged(_ sender: Any) {
+        theTaxLabel.alpha = 0
         HideIllegalInputError()
         salesTax = InputInterpretation(input: salesTaxInputField.text)
         if salesTax == nil{
@@ -131,9 +129,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             salesTax = 0.0
             return
         }
-        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
-        UpdateFinalPrice(finalPrice: finalPrice)
+//        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
+        UpdateFinalPrice()
     }
+    @IBAction func OnGetCurrentLoc(_ sender: Any) {
+        if dataManager == nil{
+            self.dataManager = DataManager()
+        }
+        locationManager?.requestLocation()
+    }
+    
     func InputInterpretation(input:String?) -> Float? {
         var tempText = input ?? ""
         tempText = tempText == "-" ? "0" : tempText
@@ -142,12 +147,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func CalculateFinalPrice(originOpt: Float?, discountOpt: Float?, taxOpt: Float?) -> Float {
-    
         let finalPrice = originOpt!*(1-discountOpt!/100)*(1+taxOpt!/100)
         return finalPrice
     }
     
-    func UpdateFinalPrice(finalPrice: Float){
+    func UpdateFinalPrice(){
+        let finalPrice = CalculateFinalPrice(originOpt: originalPrice, discountOpt: discount, taxOpt: salesTax)
         finalPriceLabel.text = "$\(String(format: "%.2f", finalPrice))"
     }
     

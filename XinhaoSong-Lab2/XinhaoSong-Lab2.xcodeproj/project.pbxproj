@@ -15,6 +15,16 @@
 		5DDCFBDE26F272C7001AF897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCFBDC26F272C7001AF897 /* LaunchScreen.storyboard */; };
 		5DF350BD26F53B1C006C4C52 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF350BC26F53B1C006C4C52 /* DisplayView.swift */; };
 		5DF350BF26F53C76006C4C52 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF350BE26F53C76006C4C52 /* Pet.swift */; };
+		5DF350C426FF84D4006C4C52 /* dogplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350C326FF84D4006C4C52 /* dogplay.wav */; };
+		5DF350C626FF8619006C4C52 /* dogfeed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350C526FF8619006C4C52 /* dogfeed.wav */; };
+		5DF350C926FF87E5006C4C52 /* catplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350C826FF87E5006C4C52 /* catplay.wav */; };
+		5DF350CB26FF888E006C4C52 /* catfeed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350CA26FF888E006C4C52 /* catfeed.wav */; };
+		5DF350CD26FF8911006C4C52 /* birdplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350CC26FF8911006C4C52 /* birdplay.wav */; };
+		5DF350D027010398006C4C52 /* birdfeed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350CF27010397006C4C52 /* birdfeed.wav */; };
+		5DF350D2270103B2006C4C52 /* bunnyfeed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350D1270103B2006C4C52 /* bunnyfeed.wav */; };
+		5DF350D427010453006C4C52 /* bunnyplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350D327010453006C4C52 /* bunnyplay.wav */; };
+		5DF350D627010497006C4C52 /* fishplay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350D527010497006C4C52 /* fishplay.wav */; };
+		5DF350D8270104D9006C4C52 /* fishfeed.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DF350D7270104D8006C4C52 /* fishfeed.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,16 @@
 		5DDCFBDF26F272C7001AF897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF350BC26F53B1C006C4C52 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		5DF350BE26F53C76006C4C52 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		5DF350C326FF84D4006C4C52 /* dogplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dogplay.wav; sourceTree = "<group>"; };
+		5DF350C526FF8619006C4C52 /* dogfeed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dogfeed.wav; sourceTree = "<group>"; };
+		5DF350C826FF87E5006C4C52 /* catplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = catplay.wav; sourceTree = "<group>"; };
+		5DF350CA26FF888E006C4C52 /* catfeed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = catfeed.wav; sourceTree = "<group>"; };
+		5DF350CC26FF8911006C4C52 /* birdplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = birdplay.wav; sourceTree = "<group>"; };
+		5DF350CF27010397006C4C52 /* birdfeed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = birdfeed.wav; sourceTree = "<group>"; };
+		5DF350D1270103B2006C4C52 /* bunnyfeed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bunnyfeed.wav; sourceTree = "<group>"; };
+		5DF350D327010453006C4C52 /* bunnyplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bunnyplay.wav; sourceTree = "<group>"; };
+		5DF350D527010497006C4C52 /* fishplay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fishplay.wav; sourceTree = "<group>"; };
+		5DF350D7270104D8006C4C52 /* fishfeed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fishfeed.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +64,7 @@
 		5DDCFBC526F272C2001AF897 = {
 			isa = PBXGroup;
 			children = (
+				5DF350C226FF84C5006C4C52 /* Sound */,
 				5DDCFBD026F272C2001AF897 /* XinhaoSong-Lab2 */,
 				5DDCFBCF26F272C2001AF897 /* Products */,
 			);
@@ -71,6 +92,23 @@
 				5DDCFBDF26F272C7001AF897 /* Info.plist */,
 			);
 			path = "XinhaoSong-Lab2";
+			sourceTree = "<group>";
+		};
+		5DF350C226FF84C5006C4C52 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				5DF350D7270104D8006C4C52 /* fishfeed.wav */,
+				5DF350D527010497006C4C52 /* fishplay.wav */,
+				5DF350D1270103B2006C4C52 /* bunnyfeed.wav */,
+				5DF350D327010453006C4C52 /* bunnyplay.wav */,
+				5DF350CC26FF8911006C4C52 /* birdplay.wav */,
+				5DF350CF27010397006C4C52 /* birdfeed.wav */,
+				5DF350CA26FF888E006C4C52 /* catfeed.wav */,
+				5DF350C826FF87E5006C4C52 /* catplay.wav */,
+				5DF350C526FF8619006C4C52 /* dogfeed.wav */,
+				5DF350C326FF84D4006C4C52 /* dogplay.wav */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,9 +168,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF350D627010497006C4C52 /* fishplay.wav in Resources */,
+				5DF350D8270104D9006C4C52 /* fishfeed.wav in Resources */,
 				5DDCFBDE26F272C7001AF897 /* LaunchScreen.storyboard in Resources */,
 				5DDCFBDB26F272C7001AF897 /* Assets.xcassets in Resources */,
+				5DF350D027010398006C4C52 /* birdfeed.wav in Resources */,
+				5DF350C626FF8619006C4C52 /* dogfeed.wav in Resources */,
+				5DF350C926FF87E5006C4C52 /* catplay.wav in Resources */,
+				5DF350D2270103B2006C4C52 /* bunnyfeed.wav in Resources */,
+				5DF350CD26FF8911006C4C52 /* birdplay.wav in Resources */,
+				5DF350D427010453006C4C52 /* bunnyplay.wav in Resources */,
+				5DF350CB26FF888E006C4C52 /* catfeed.wav in Resources */,
 				5DDCFBD926F272C2001AF897 /* Main.storyboard in Resources */,
+				5DF350C426FF84D4006C4C52 /* dogplay.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

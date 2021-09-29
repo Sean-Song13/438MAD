@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,24 +13,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XinhaoSong_Lab2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcQ-7e-PFn" userLabel="Grey Box">
-                                <rect key="frame" x="0.0" y="44" width="390" height="486"/>
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="974"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="BcG-vf-Pxb" userLabel="PetImage">
-                                        <rect key="frame" x="135" y="179" width="120" height="120"/>
+                                        <rect key="frame" x="357" y="418" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NCC-bt-Ty6">
-                                <rect key="frame" x="30" y="560" width="330" height="40"/>
+                                <rect key="frame" x="30" y="1004" width="774" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5a-ul-rWF">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="MVo-7r-cBf"/>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-90-rQu">
-                                        <rect key="frame" x="180" y="0.0" width="150" height="40"/>
+                                        <rect key="frame" x="402" y="0.0" width="372" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3yU-pG-YzM"/>
@@ -58,10 +58,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eUB-W7-lMq">
-                                <rect key="frame" x="30" y="620" width="330" height="140"/>
+                                <rect key="frame" x="30" y="1064" width="774" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ea9-fT-6Kf" userLabel="HappinessView">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happiness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J1-ax-A2S">
                                                 <rect key="frame" x="0.0" y="12" width="85" height="22"/>
@@ -74,13 +74,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="played:2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWB-4N-oqC">
-                                                <rect key="frame" x="265" y="13.666666666666627" width="65" height="20.333333333333329"/>
+                                                <rect key="frame" x="312" y="13.5" width="65" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxe-gp-rTo" userLabel="Happiness" customClass="DisplayView" customModule="XinhaoSong_Lab2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="39" width="330" height="20"/>
+                                                <rect key="frame" x="0.0" y="39" width="377" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="hfd-jS-Il7"/>
@@ -100,7 +100,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDg-ta-6UY" userLabel="FoodLevelView">
-                                        <rect key="frame" x="0.0" y="80" width="330" height="60"/>
+                                        <rect key="frame" x="397" y="0.0" width="377" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-yO-0St">
                                                 <rect key="frame" x="0.0" y="12" width="87" height="22"/>
@@ -113,13 +113,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fed:2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITr-hy-A0h">
-                                                <rect key="frame" x="290.66666666666669" y="13.666666666666627" width="39.333333333333314" height="20.333333333333329"/>
+                                                <rect key="frame" x="337.5" y="13.5" width="39.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemGray2Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8t-eV-dHW" userLabel="Happiness" customClass="DisplayView" customModule="XinhaoSong_Lab2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="39" width="330" height="20"/>
+                                                <rect key="frame" x="0.0" y="39" width="377" height="20"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="zRY-g0-qPf"/>
@@ -143,38 +143,38 @@
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1Nb-r1-CAo">
-                                <rect key="frame" x="30" y="770" width="330" height="40"/>
+                                <rect key="frame" x="30" y="1134" width="774" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMJ-gT-Gqu">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                                         <state key="normal" title="Dog"/>
                                         <connections>
                                             <action selector="OnDogPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EDD-cY-Mc4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVK-QW-Vch">
-                                        <rect key="frame" x="71" y="0.0" width="46" height="40"/>
+                                        <rect key="frame" x="160" y="0.0" width="134.5" height="40"/>
                                         <state key="normal" title="Cat"/>
                                         <connections>
                                             <action selector="OnCatPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ge-nP-9Qa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iO-qf-nkk">
-                                        <rect key="frame" x="142" y="0.0" width="46" height="40"/>
+                                        <rect key="frame" x="319.5" y="0.0" width="135" height="40"/>
                                         <state key="normal" title="Bird"/>
                                         <connections>
                                             <action selector="OnBirdPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dj1-l6-2uu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG7-ym-xRC">
-                                        <rect key="frame" x="213" y="0.0" width="46" height="40"/>
+                                        <rect key="frame" x="479.5" y="0.0" width="134.5" height="40"/>
                                         <state key="normal" title="Bunny"/>
                                         <connections>
                                             <action selector="OnBunnyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LXV-TL-x5Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT0-TM-rz2">
-                                        <rect key="frame" x="284" y="0.0" width="46" height="40"/>
+                                        <rect key="frame" x="639" y="0.0" width="135" height="40"/>
                                         <state key="normal" title="Fish"/>
                                         <connections>
                                             <action selector="OnFishPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6wO-Pb-dGM"/>

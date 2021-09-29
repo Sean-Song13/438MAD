@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import AudioToolbox
 class Pet {
     
     var genre:PetGenre
@@ -19,7 +19,7 @@ class Pet {
     var playedTimes: Int
     var fedTimes: Int
     
-    let maxValue:Float = 100.0
+    let maxValue:Float = 10.0
     
     init(genre: PetGenre, color: UIColor) {
         happiness = 0
@@ -31,13 +31,15 @@ class Pet {
     }
     
     func play(){
-        happiness += 10
-        foodLevel -= 20
+        happiness += 1
+        foodLevel -= 1
         playedTimes += 1
         if(foodLevel < 0){
-            foodLevel += 20
-            happiness -= 10
+            foodLevel += 1
+            happiness -= 1
             playedTimes -= 1
+        }else{
+            MakeSound(type: "play")
         }
         if(happiness > maxValue){
             happiness = maxValue
@@ -45,13 +47,28 @@ class Pet {
     }
     
     func feed(){
-        foodLevel += 10
+        foodLevel += 1
         if(foodLevel > maxValue){
             foodLevel = maxValue
             fedTimes -= 1
         }
+        MakeSound(type: "feed")
         fedTimes += 1
     }
+    
+    func MakeSound(type:String){
+        var soundID:SystemSoundID = 0
+        var path = Bundle.main.path(forResource: self.genre.description+type, ofType: "wav")
+        if(path == nil){
+            path = Bundle.main.path(forResource: self.genre.description+type, ofType: "mp3")
+        }
+        guard path != nil else { return }
+        let baseURL = NSURL(fileURLWithPath: path!)
+        AudioServicesCreateSystemSoundID(baseURL, &soundID)
+        AudioServicesPlaySystemSound(soundID)
+    }
+    
+    
 }
 
 enum PetGenre {

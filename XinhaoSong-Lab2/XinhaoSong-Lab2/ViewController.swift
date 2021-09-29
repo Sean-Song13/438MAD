@@ -28,9 +28,6 @@ class ViewController: UIViewController {
         }
     }
     
-//    TODO:
-//    The display bars animate when the pet is played or fed, but jump immediately to the correct values when switching between pets.
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
